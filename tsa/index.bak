@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Technology Student Association-MCHS</title>
+<meta charset="UTF-8">
+<meta name="description" content="This website is the 2013 entry for the TSA Webmaster competition for Mallard Creek High School">
+<meta name="keywords" content="TSA, Mallard Creek High School, TSA Webmaster, Josh Kayani, RJ Duane, Ebube Chuba">
+<link rel="stylesheet" type="text/css" href="../stylesheet.css"/>
+</head>
+<body>
+<div id="container">
+	<h1 id="logo">Mallard Creek High School Tech Club</h1>
+	<img src="../images/grandheader.png" height="288" width="1000">
+	<nav>
+		<ul id="menu" class="dropdown">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../tsa/">Technology Student Association</a>
+				<ul>
+					<li><a href="../tsa/">About</a></li>
+					<li><a href="designbrief/">Design Brief</a>
+						<ul>
+							<li><a href="designbrief/">2013 Design Brief</a></li>
+							<li><a href="designbrief/journalism/">Our Solution</a></li>
+							<li><a href="designbrief/journalism/sources/">Sources</a></li>
+						</ul>
+					</li>
+					<li><a href="pictures/">Pictures</a></li>
+				</ul>
+			</li>
+			<li><a href="../aoe/">Academy of Engineering</a>
+				<ul>
+					<li><a href="../aoe/">About</a>
+					<li><a href="../aoe/pictures/">Pictures</a></li>
+					<li><a href="https://twitter.com/mchs_AOE">Twitter</a></li>
+				</ul>
+			</li>
+			<li><a href="../motorsports/">Maverick Motorsports</a>
+				<ul>
+					<li><a href="../motorsports/">About</a></li>
+					<li><a href="http://studentracingchallenge.com/">Student Racing Challenge Site</a></li>
+				</ul>
+			<li><a href="../vex/">Vex Robotics</a>
+				<ul>
+					<li><a href="../vex/">About</a>
+					<li><a href="http://www.vexforum.com/wiki/index.php/Sack_Attack">Vex Sack Attack Rules</a></li>
+					<li><a href="http://www.vexforum.com/wiki/index.php/Swept_Away">Vex Swept Away Rules</a></li>
+				</ul>
+			</li>
+				<li><a href="../contact">Contact Us</a></li>
+		</ul>
+		</nav>
+		<br />
+		<br />
+		<br />
+		<br />
+		<h1 id="Heading">Technology Student Association</h1>
+		<p style="text-align:center;">
+			<img src="../images/tsa-logo.jpg" alt="TSA logo" style="display:inline;padding:10px;"/>
+		</p>
+		<div id="motto">
+			The Technology Student Association fosters personal growth, leadership, and
+			opportunities in technology, innovation, design, and engineering. Members apply
+			and integrate science, technology, engineering and mathematics concepts through
+			co-curricular activities, competitive events and related programs.
+		</div>
+		<p class="content">
+		Mallard Creek's TSA is in its 2nd year, and while we're still growing, we show no signs of stopping soon! Our chapter includes
+		people that specialize in various different areas, such as robotics and programming. Led by our amazing advisor Ms.Sharrell Howard,
+		we're going to the 2013 NCTSA State Conference for the first time, and we're ready to compete!.
+		<br />
+		<br />
+		<strong>We're out to win, and we don't plan on coming home with anything less.</strong>
+		</p>
+		<hr />
+		<h3>2013 Regional Conference</h3>
+			<p class="content">
+			Our TSA chapter has had TONS of success at this years regional conference in Boone, NC. For more information, including pictures and 
+			how we placed, see our <a href="pictures">Pictures</a> page.
+			</p>
+		<hr />
+		<h3>Meet Our Officers</h3>
+			<p class="content">
+			What is a TSA chapter without its officers and advisors? We wouldn't be doing anything without them, because at Mallard Creek, our advisors and officers help us channel our 
+			enthusiasm for technology into the creative products we make for competitions. Here's some information on our officers and Mallard Creek's TSA: 
+			</p>
+		gsadg<hr />
+		<div id="Footer">
+			<a class="footer" href="../about/">About</a> |  Developed by Josh Kayani, RJ Duane, and Ebube Chuba for Mallard Creek High School's Tech Club | <a class="footer" href="http://validator.w3.org/check?uri=mchswebmaster.com&charset=%28detect+automatically%29&doctype=Inline&group=0">Valid HTML5</a> 
+		</div>			
+</div>
+</body>
+</html>

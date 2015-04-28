@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="csss.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<!-- here comes the syntax highlighter stuff -->
+	<script type="text/javascript" src="syntax/scripts/shCore.js"></script>
+	<script type="text/javascript" src="syntax/scripts/shBrushXml.js"></script>
+	<script>
+		// Actually does the highlighting
+		SyntaxHighlighter.all();
+	</script>
+	<link rel="stylesheet" type="text/css" href="syntax/styles/shCore.css">
+	<link rel="stylesheet" type="text/css" href="syntax/styles/shThemeDefault.css">
+	<!--done syntax highlighter -->
+	<style>
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>MCHS Webmaster: Design Brief 2014 - Learn to Code</h1>
+		<br />
+		<div class="nav">
+			<a href="#modal">Home</a>
+			<a href="#modal">About</a>
+			<a href="#modal">Learn</a>
+			<a href="#contact">Contact</a>
+		</div>
+	</div>
+	<!-- sidebar -->
+	<a class="sidebar-open" href="#sidebar">Open Lesson Plan</a>
+	<script>
+		// Code for opening sidebar w/o CSS3
+		$(".sidebar-open").click(function(){
+			$("div#sidebar").animate({marginLeft: "-5px"}, 500, function(){
+				$(".sidebar-open").animate({opacity: 0});
+			});
+		});
+		$(document).ready(function(){
+			if( $(".sidebar-open").css("display") == "none" ){
+				$("div#sidebar").hover(function(){
+					$(this).animate({marginLeft: "-5px"}, 500);
+				}, function(){
+					$(this).animate({marginLeft: "-200px"}, 500);
+				});
+			}
+		});
+	</script>
+	<div id="sidebar" class="menu">
+		<span><a class="sidebar-close" style="color:white;" href="#">X</a></span>
+		<script>
+			// Code for closing sidebar w/o CSS3
+			$(".sidebar-close").click(function(){
+				$("div#sidebar").animate({marginLeft: "-999px"}, 500, function(){
+					$(".sidebar-open").animate({opacity: 1});
+				});
+			});
+		</script>
+		<h2 style="color:white;">HTML Lessons</h2>
+		<br />
+		<p class="menu-item">
+			<a href="">What's HTML?</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="http://www.google.com">HTML Lingo</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">How to make an HTML file</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Site Organization</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Required Tags</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Make the Website Magic</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Linking</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Multimedia</a>
+		</p>
+	</div>
+	<br />
+	<script>
+		// Code for menu animations w/o CSS3
+		$(".menu-item").hover(function(){
+			$(this).animate({marginLeft:"10px"}, 150);
+		}, function(){
+			$(this).animate({marginLeft:"0px"}, 150);
+		});
+	</script>
+	<!-- done sidebar -->
+	<!--here comes the right panel -->
+		<div class="lesson-nav">
+		<h5>Navigate the Lesson</h5>
+		<ul>
+			<li><a href="">Practice</a></li>
+			<li><a href="sample-quiz.html">Quiz</a></li>
+			<li><a href="">Apply</a></li>
+		</ul>
+		<br />
+		<h5>Additional Resources</h5>
+		<ul>
+			<li><a href="">Something</a></li>
+			<li><a href="">w3Schools-Sike</a></li>
+			<li><a href="">MDN: Mozilla Developer Network</a></li>
+		</ul>
+	</div>
+	<!--done right panel -->
+	<!--start me up on that content stuff -->
+	<div class="content">
+		<h3 class="lesson-heading">Lesson 1: What's HTML?</h3>
+		<br />
+		<p>
+			HTML a "markup language" used universally throughout the web. When you visit a website, it tells your web 
+			browser what to display, and how to display it; it's kind of like a set of instructions that the creator of the 
+			website writes out. These instructions are written in the language of HTML "markup", or code. As a brand new web
+			developer, you'll be the one telling the web browser what to do!
+		</p>
+		<br />
+		<p>
+			HTML has been around since the beginnings of the Internet. Back in 1989, after about 9 years of consideration, a 
+			physicist by the name of Tim Berners-Lee proposed a hypertext system for the web. You don't need to be a physicist 
+			to understand HTML though; the final HyperText Markup Language (HTML!) standard adopted in 1995 is one of the 
+			easiest and most versatile type of coding you can learn!
+		</p>
+		<br />
+		<p>
+			HTML is occasionally revised to meet the demands of the evolving web. One of the most notable and recent changes was
+			the introduction of HTML5 - the newest standard and the one you will be taught going forward. Think about what you do 
+			on the web now - watch YouTube videos? Listen to Pandora? Post pictures to Instagram? These types of multimedia over 
+			the Internet were not even dreamt of back in 1989, but are now commonplace. HTML5 was created to simplify the process
+			of putting that type of content onto your website.
+		</p>
+		<br />
+		<pre class="brush: xml">
+			&lt;!DOCTYPE html&gt;
+			&lt;html&gt;
+			&lt;body&gt;
+			&lt;p&gt;Hello world&lt;/p&gt;
+			&lt;/body&gt;
+			&lt;/html&gt;
+		</pre>
+		<span class="lead">Well, that's all you need to know there. Check out some additional resources, or <a href="">quiz yourself</a>!</span>
+	</div>
+	<!--done content -->
+	<br />
+	<br />
+	<br />
+	<!--time to wrap things up with a footer -->
+	<div class="footer">
+		<h5 class="swag">Created by the Mallard Creek High School TSA</h5>
+	</div>
+	<!--done footer -->
+</body>
+</html>
+<!--done document. :) -->

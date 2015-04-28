@@ -1,0 +1,163 @@
+/* Set styles that are reset by CSS reset */
+html{
+	height:100%;
+}
+body{
+	height: 100%;
+	font-family: sans-serif;
+	background-color: AliceBlue;
+}
+h1{font-size:24pt;}
+h2{font-size:20pt;}
+h3{font-size:18pt;}
+h4{font-size:16pt;}
+h5{font-size:14pt;}
+h6{font-size:12pt;}
+strong{font-weight:bold;}
+ul{
+	list-style-type:disc;
+	list-style-position:inside;
+}
+li{
+	padding:5px;
+}
+ol{
+	list-style-type:decimal;
+}
+p, div.pushed{
+	width:75%;
+	line-height:150%;
+}
+
+em {
+	font-style: italic;
+}
+
+/* Left Sidebar */
+div.sidebar{
+	position:fixed;
+	width:20%;
+	margin-left:0;
+	padding:10px;
+	float:left;
+	box-sizing:border-box;
+	background-color: DodgerBlue;
+	background-image: url(../circuit.png);
+	background-size: 100%;
+	height: 100%;
+}
+p.menu-item{
+	width:100%;
+	padding:5px;
+	overflow:hidden;
+	box-sizing:border-box;
+	background-color: DeepSkyBlue;
+	
+}
+p.menu-item a{
+	text-align: center;
+	color: white;
+	/*font-weight: bold;*/
+	text-decoration:none;
+	display:block;
+
+}
+h5.swag{
+	text-align:center;
+	font-style:italic;
+	color:#EEEEEE;
+}
+
+/* Section Navigation */
+div.section-nav{
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Content */
+div.content{
+	width:70%;
+	margin-left:auto;
+	padding:5px;
+	display:block;
+}
+
+/* Wrapper thing */
+.wrapper {
+	height: 100%;
+}
+/* used for the questions to replicate the above (<p> can't parent <form> and stuff ) */
+a:link,a:visited{
+	text-decoration:none;
+	color:#0066FF;
+}
+a:hover,a:active{
+	text-decoration:underline;
+}
+form.q{
+	background-color:inherit;
+	width:75%;
+}
+ol.answers{
+	margin-left:15%;
+	list-style-type:lower-alpha;
+}
+
+/* Footer */
+div.footer{
+	height:30px;
+	width:100%;
+	margin:0;
+	padding:0;
+	background-color: #DDDDDD;
+}
+div.footer h5{
+	line-height:150%;
+	text-align:center;
+	color: black;
+}
+ 
+/* Modals for Quizes */
+div.overlay{
+	height:100%;
+	width:100%;
+	visibility:hidden;
+	display:inline-block;
+	position:absolute;
+	top:-1000px;
+	right:0%;
+	z-index:1000;
+	opacity:0;
+	background-color: rgba(69, 69, 69, 0.75);
+}
+div.modal-body{
+	height:30%;
+	width:50%;
+	padding:10px;
+	position:relative;
+	left:25%;
+	top:45%;
+	box-shadow:0px 0px 2px 2px #EEEEEE;;
+	border-radius:10px;
+	background-color: white;
+}	
+span.results-body{
+	width:75%
+	margin:0;
+	line-height:100%;
+}
+
+/* Breakpoints */
+@media (max-width:570px) {
+	div.sidebar{
+		width:75%;
+		margin:auto;
+		padding:10px;
+		float:none;
+	}
+	div.content, p, div.pushed{
+		width: 100%;
+		margin: auto;
+		padding: 5px;
+		display: block;
+	}
+}

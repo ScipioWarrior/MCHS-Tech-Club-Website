@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Academy of Engineering Pictures | MCHS</title>
+<meta charset="UTF-8">
+<meta name="description" content="This website is the 2013 entry for the TSA Webmaster competition for Mallard Creek High School">
+<meta name="keywords" content="TSA, Mallard Creek High School, TSA Webmaster, Josh Kayani, RJ Duane, Bryson Roland and Vishal Mulia">
+<link rel="stylesheet" type="text/css" href="../../stylesheet.css"/>
+<script>
+//gallery script by Josh Kayani
+var x=0;
+var images=["engineering1.jpg","engineering2.jpg","engineering3.jpg","engineeringweek1.jpg","engineeringweek2.jpg","engineeringweek3.jpg","engineeringweek4.jpg"]; //the pictures to be used
+var lastOne=(images.length)-1; //this is the last position in the array, used to reset the gallery
+var captions=[																						//the captions for the pictures
+			"MCHS AoE students taking home <strong>1st place</strong> in Engineering Explorers.",
+			"AoE students with North Carolina's state superintendent.",
+			"AoE student Jalen Roddey with the superintendent of CMS, Heath Morrison.",
+			"AoE students Carnisha Kitchen and Sarah Popp enjoying Engineering Week at Mallard Creek",
+			"Guidance counselor Ms.Reed tries her hand at cup-stacking at Engineering Week",
+			"Students try to balance pencils using centroids during Engineering Week",
+			"A student puzzles over an engineering feat created with LEGO's"
+			 ];
+
+function changeImage(x){
+document.getElementById('image').src="https://googledrive.com/host/0B1lJ9Ot4N1W9X1pza3E4Ykh4amM/aoe/pictures/"+images[x];	// fetches the picture from Drive changes the picture
+document.getElementById('caption').innerHTML=captions[x];	//changes the caption		
+}
+
+function next(){
+	if(x===lastOne){
+		x=0;	
+		changeImage(x);	//resets back to image 1 IF the user is on the last image
+	}
+	else{
+		x++;										//goes to the next image 
+		changeImage(x);
+	}
+}
+
+function back(){
+	if(x===0){
+		x=lastOne;									//resets back to last image IF the user is on the first image
+		changeImage(x);
+	}
+	else{
+		x--;								//goes to the next image
+		changeImage(x);
+	}
+}
+</script>
+<style>
+#caption{
+font-family:sans-serif;
+font-size:14px;
+}
+</style>
+</head>
+<body>
+	<div id="navbar">
+	<span class="title"><strong>MCHS</strong> Tech Club</span>
+	<nav>
+		<ul id="menu" class="dropdown">
+			<li><a href="../../">Home</a></li>
+			<li><a href="../../tsa/">Technology Student Association</a>
+				<ul>
+					<li><a href="../../tsa/">About</a></li>
+					<li><a href="../../tsa/pictures/">Pictures</a></li>
+				</ul>
+			</li>
+			<li><a href="../">Academy of Engineering</a>
+				<ul>
+					<li><a href="../">About</a></li>
+					<li><a href="../pictures">Pictures</a></li>
+					<li><a href="https://twitter.com/mchs_AOE">Twitter</a></li>
+				</ul>
+			</li>
+			<li><a href="../../motorsports/">Maverick Motorsports</a>
+				<ul>
+					<li><a href="../../motorsports/">About</a></li>
+					<li><a href="../../motorsports/pictures">Pictures</a></li>
+					<li><a href="http://studentracingchallenge.com/">Student Racing Challenge Site</a></li>
+				</ul>
+			<li><a href="../../vex">VEX Robotics</a>
+				<ul>
+					<li><a href="../../vex">About</a></li>
+					<li><a href="http://www.vexforum.com/wiki/index.php/Sack_Attack">VEX Sack Attack Rules</a></li>
+					<li><a href="http://www.vexforum.com/wiki/index.php/Swept_Away">VEX Swept Away Rules</a></li>
+				</ul>
+			</li>
+				<li><a href="../../contact">Contact Us</a></li>
+		</ul>
+	</nav>
+	</div>
+<div id="container">
+		<br />
+		<h1 id="Heading">Gallery - Academy of Engineering</h1>
+		<p class="content">
+		Our <a href="../">Academy of Engineering</a> is doing great things at Mallard Creek: We're having fun, while educating our peers on the importance of engineering. Check out the pictures below
+		to get a better idea of what we're up to:
+		</p>
+		<div id="gallery" style="text-align:center;height:450px;padding-bottom:10px;">
+			<img id="image" src="https://googledrive.com/host/0B1lJ9Ot4N1W9X1pza3E4Ykh4amM/aoe/pictures/engineering1.jpg" alt="A gallery of pictures of the Mallard Creek High School Academy of Engineering" />
+			<br />
+			<span id='caption'>MCHS AoE students taking home <strong>1st place</strong> in Engineering Explorers.</span>
+			<br />
+			<a href="javascript:back();javascript:window.scrollTo(0,document.height);">Previous Image</a> |
+			<a href="javascript:next();javascript:window.scrollTo(0,document.height);">Next Image</a>
+		</div>
+	<hr />
+	<div id="Footer">
+		Developed by Josh Kayani, RJ Duane, Kati Hughes, and Jerry McElwain for Mallard Creek High School's Tech Club | <a class="footer" href="../../about/">About Page</a>
+	</div>
+	<div id="notice">2015 Design Brief: <a href="../../ewaste/">E-waste Solutions</a></div>		
+</div>
+</body>
+</html>		 
+		

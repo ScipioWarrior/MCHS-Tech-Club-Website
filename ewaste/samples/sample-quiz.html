@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="csss.css">
+	<!-- meet jquery. jquery and all it's plugins -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+	<!-- here comes the syntax highlighter stuff -->
+	<script type="text/javascript" src="syntax/scripts/shCore.js"></script>
+	<script type="text/javascript" src="syntax/scripts/shBrushXml.js"></script>
+	<script>
+		// Actually does the highlighting
+		SyntaxHighlighter.all();
+	</script>
+	<link rel="stylesheet" type="text/css" href="syntax/styles/shCore.css">
+	<link rel="stylesheet" type="text/css" href="syntax/styles/shThemeDefault.css">
+	<!--done syntax highlighter -->
+	<script type="text/javascript" src="quizGrader.js"></script>
+	<script>
+	// Answser key
+	eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('2 3=["1","0","1","0","4"];',5,5,'a|b|var|key|d'.split('|'),0,{}));
+	</script>
+	<style>
+	html{
+		height:100%;
+	}
+	div.overlay{
+		height:100%;
+		width:100%;
+		visibility:hidden;
+		display:inline-block;
+		position:absolute;
+		top:-1000px;
+		right:0%;
+		z-index:1000;
+		opacity:0;
+		background-color:rgba(255,0,0, 0.75);
+	}
+	div.modal-body{
+		height:30%;
+		width:50%;
+		padding:10px;
+		position:relative;
+		left:25%;
+		top:45%;
+		box-shadow:0px 0px 2px 2px #EEEEEE;;
+		border-radius:10px;
+		background-color:white;
+	}	
+	span.results-body{
+		width:75%
+		margin:0;
+		line-height:100%;
+	}
+	</style>
+	<script>
+	$(document).ready(function(){
+		$(window).resize(function(){
+			$("#dim").text( "Current Height " + $(window).height() + " Current Width " + $(window).width() );
+			if(settings.modal.open){
+				$(".overlay").css("height", $(document).height()+"px");
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="header">
+		<span style="color:white;padding-top:3px;" id="dim">stuff</span>
+		<h1>MCHS Webmaster: Design Brief 2014 - Learn to Code</h1>
+		<br />
+		<div class="nav">
+			<a href="#modal">Home</a>
+			<a href="#modal">About</a>
+			<a href="#modal">Learn</a>
+			<a href="#contact">Contact</a>
+		</div>
+	</div>
+	<br />
+	<!-- sidebar -->
+	<a class="sidebar-open" href="#sidebar">Open Lesson Plan</a>
+	<script>
+		// Code for opening sidebar w/o CSS3
+		$(".sidebar-open").click(function(){
+			$("div#sidebar").animate({marginLeft: "-5px"}, 500, function(){
+				$(".sidebar-open").animate({opacity: 0});
+			});
+		});
+		$(document).ready(function(){
+			if( $(".sidebar-open").css("display") == "none" ){
+				$("div#sidebar").hover(function(){
+					$(this).animate({marginLeft: "-5px"}, 500);
+				}, function(){
+					$(this).animate({marginLeft: "-200px"}, 500);
+				});
+			}
+		});
+	</script>
+	<div id="sidebar" class="menu">
+		<span><a class="sidebar-close" style="color:white;" href="#">X</a></span>
+		<script>
+			// Code for closing sidebar w/o CSS3
+			$(".sidebar-close").click(function(){
+				$("div#sidebar").animate({marginLeft: "-999px"}, 500, function(){
+					$(".sidebar-open").animate({opacity: 1});
+				});
+			});
+		</script>
+		<h2 style="color:white;">HTML Lessons</h2>
+		<br />
+		<p class="menu-item">
+			<a href="">What's HTML?</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="http://www.google.com">HTML Lingo</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">How to make an HTML file</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Site Organization</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Required Tags</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Make the Website Magic</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Linking</a>
+		</p>
+		<br />
+		<p class="menu-item">
+			<a href="">Multimedia</a>
+		</p>
+	</div>
+	<script>
+		// Code for menu animations w/o CSS3
+		$(".menu-item").hover(function(){
+			$(this).animate({marginLeft:"10px"}, 150);
+		}, function(){
+			$(this).animate({marginLeft:"0px"}, 150);
+		});
+	</script>
+	<!-- done sidebar -->
+	<!--here comes the right panel -->
+	<div class="lesson-nav">
+		<h5>Navigate the Lesson</h5>
+		<ul>
+			<li><a href="sample-lesson.html">Practice</a></li>
+			<li><a href="">Quiz</a></li>
+			<li><a href="">Apply</a></li>
+		</ul>
+		<br />
+		<h5>Additional Resources</h5>
+		<ul>
+			<li><a href="">Something</a></li>
+			<li><a href="">w3Schools-Sike</a></li>
+			<li><a href="">MDN: Mozilla Developer Network</a></li>
+		</ul>
+	</div>
+	<!--done right panel -->
+	<!-- quick place to toss in modal's and stuff -->
+	<!--start me up on that content stuff -->
+	<div class="content">
+		<h3 class="lesson-heading">Lesson 1: Quiz</h3>
+		<br />
+			<p>
+				<span class="question">1. What is HTML?</span>
+				<form id="1" class="q">
+					<ol class="answers">
+						<li><input type="radio" name="1" value="a"> Another word for Spanish</li>
+						<li><input type="radio" name="1" value="b" checked> A markup language</li>
+						<li><input type="radio" name="1" value="c"> The organization that invented the Internet</li>
+						<li><input type="radio" name="1" value="d"> A tasty sandwich from Subway</li>
+					</ol>
+				</form>
+			</p>
+			<br />
+			<p>
+				<span class="question">2. HTML has been around since the beginnings of ______</span>
+				<form id="2" class="q">
+					<ol class="answers">
+						<li><input type="radio" name="2" value="a" checked> The World Wide Web</li>
+						<li><input type="radio" name="2" value="b"> Humanity</li>
+						<li><input type="radio" name="2" value="c"> The Industrial Revolution</li>
+						<li><input type="radio" name="2" value="d"> Computers</li>
+					</ol>
+				</form>
+			</p>
+			<br />
+			<p>
+				<span class="question">3. HTML stands for:</span>
+				<form id="3" class="q">
+					<ol class="answers">
+						<li><input type="radio" name="3" value="a"> Hotmail</li>
+						<li><input type="radio" name="3" value="b" checked> Hypertext Markup Language</li>
+						<li><input type="radio" name="3" value="c"> Henry Thomas Morgan-Lee</li>
+						<li><input type="radio" name="3" value="d"> Hey There. Meet Later?</li>
+					</ol>
+				</form>
+			</p>
+			<br />
+			<p>
+				<span class="question">4. HTML is sometimes changed.</span>
+				<form id="4" class="q">
+					<ol class="answers">
+						<li><input type="radio" name="4" value="a"> True</li>
+						<li><input type="radio" name="4" value="b" checked> False</li>
+					</ol>
+				</form>
+			</p>
+			<br />
+			<p>
+				<span class="question">5. The newest standard in HTML is (choose all that apply):</span>
+				<form id="5" class="q">
+					<ol class="answers">
+						<li><input type="radio" name="5" value="a"> HTML2</li>
+						<li><input type="radio" name="5" value="b"> HTML3</li>
+						<li><input type="radio" name="5" value="c" checked> HTML4</li>
+						<li><input type="radio" name="5" value="d"> HTML5</li>
+					</ol>
+				</form>
+			</p>
+		<br />
+		<span class="lead">Already finished? <a href="javascript:$getChoices(key);">Grade your answers</a>.</span>
+		<div class="overlay" id="top">
+			<div class="modal-body">
+				<h2>Results</h2>
+				<br />
+				<strong>We reccommend a 70% or higher on this quiz before continuing to the next section.</strong>
+				<br />
+				<br />
+				<span class="results-body">
+					On this attempt, you earned a 70%. Excellent work.
+				</span>
+				<p class="button"><a href="javascript:$close()">Retake this quiz</a></p>
+				<p class="button"><a href="http://www.mchswebmaster.com">Continue to next Lesson</a></p>
+			</div>
+		</div>
+	</div>
+	<!--done content -->
+	<br />
+	<br />
+	<br />
+	<!--time to wrap things up with a footer -->
+	<div class="footer">
+		<h5 class="swag">Created by the Mallard Creek High School TSA</h5>
+	</div>
+	<!--done footer -->
+</body>
+</html>
+<!--done document. :) -->
